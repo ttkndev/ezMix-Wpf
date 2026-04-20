@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
-        Title="Phần mềm trộn đề - ezMix" Height="1000" Width="1600">
+        Title="Phần mềm trộn đề - ezMix" 
+        MinWidth="1024" MinHeight="768">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -15,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Cột trái: Sidebar -->
-        <DockPanel Grid.Column="0" Background="{StaticResource PrimaryBrush}" Width="{Binding MenuWidth}" >
+        <DockPanel Grid.Column="0" Background="{StaticResource PrimaryBrush}" Width="{Binding MenuWidth}">
             <!-- Hàng 1: Logo + ezMix + nút thu gọn -->
             <Grid DockPanel.Dock="Top" Height="50">
                 <Grid.ColumnDefinitions>
