@@ -1,9 +1,9 @@
 {
-  "version": "1.1.1",
-  "url": "https://raw.githubusercontent.com/nhathinh2703/ez-updates/main/apps/ezMix/ezMix_1.1.1.zip",
+  "version": "2.0.1",
+  "url": "https://raw.githubusercontent.com/ttkndev/ezMix-Wpf/main/setup/ezMix_2.0.1.zip",
   "mandatory": false,
   "changelog": [
-    "- Tối ưu hiển thị đáp án theo dòng.",
-    "- Cải tiến hiệu suất."
+    "- Cân bằng tỉ lệ đáp án đúng.",
+    "- Điều chỉnh chuẩn hoá đề."
   ]
 }

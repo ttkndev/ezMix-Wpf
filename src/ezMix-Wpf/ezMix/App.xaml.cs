@@ -65,7 +65,7 @@ namespace ezMix
             var version = Assembly.GetExecutingAssembly().GetName().Version;
             string currentVersion = $"{version.Major}.{version.Minor}.{version.Build}";
 
-            const string updateJsonUrl = "https://raw.githubusercontent.com/nhathinh2703/ez-updates/main/apps/ezMix/latest.json";
+            const string updateJsonUrl = "https://raw.githubusercontent.com/ttkndev/ezMix-Wpf/main/setup/latest.json";
 
             var updateService = ServiceProvider.GetRequiredService<IUpdateCheckService>();
             try
