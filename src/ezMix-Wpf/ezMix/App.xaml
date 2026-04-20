@@ -1,0 +1,50 @@
+﻿<Application x:Class="ezMix.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="clr-namespace:ezMix.Views"
+             xmlns:viewModels="clr-namespace:ezMix.ViewModels"
+             xmlns:converters="clr-namespace:ezMix.Assets.Converters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             ShutdownMode="OnMainWindowClose">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Property element phải đứng đầu -->
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Bộ màu và font -->
+                <ResourceDictionary Source="Assets/Styles/ColorsAndFonts.xaml"/>
+                <!-- Các control -->
+                <ResourceDictionary Source="Assets/Styles/Button.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/CheckBox.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/ComboBox.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/Dashboard.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/DataGrid.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/RadioButton.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/TabControl.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/TextBlock.xaml"/>
+                <ResourceDictionary Source="Assets/Styles/TextBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Sau đó mới khai báo các resource khác -->
+            <!-- Map ViewModel -> View -->
+            <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+                <views:HomeUserControl/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:MixViewModel}">
+                <views:MixUserControl/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModels:UtilityViewModel}">
+                <views:UtilityUserControl/>
+            </DataTemplate>
+
+            <!-- Converters -->
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+            <converters:BoolToHiddenConverter x:Key="BoolToHiddenConverter"/>
+            <converters:WidthToMarginConverter x:Key="WidthToMarginConverter"/>
+            <converters:LevelConverter x:Key="LevelConverter"/>
+            <converters:QuestionTypeConverter x:Key="QuestionTypeConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

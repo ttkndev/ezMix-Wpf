@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="FlatCheckBox" TargetType="CheckBox">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <!-- Ô vuông -->
+                        <Border x:Name="Border"
+                            Width="18" Height="18"
+                            Background="{StaticResource TextBoxBackgroundBrush}"
+                            BorderBrush="{StaticResource CheckBoxBorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="{StaticResource DefaultCornerRadius}"
+                            Margin="0,0,6,0"
+                            VerticalAlignment="Center">
+                            <!-- Dấu tick -->
+                            <Path x:Name="CheckMark"
+                              Data="M 2 9 L 7 14 L 16 4"
+                              Stroke="{StaticResource CheckBoxCheckedBrush}"
+                              StrokeThickness="2"
+                              Stretch="Uniform"
+                              Visibility="Collapsed"/>
+                        </Border>
+                        <!-- Nội dung -->
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      VerticalAlignment="Center"
+                                      Margin="2,0,0,0"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource CheckBoxHoverBrush}"/>
+                        </Trigger>
+                        <!-- Checked -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource CheckBoxCheckedBrush}"/>
+                        </Trigger>
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource CheckBoxDisabledBrush}"/>
+                            <Setter Property="Foreground" Value="Gray"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource BorderBrushLight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

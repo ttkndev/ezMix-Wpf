@@ -1,0 +1,132 @@
+﻿<UserControl x:Class="ezMix.Views.UtilityUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ezMix.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1600">
+
+    <UserControl.Background>
+        <SolidColorBrush Color="#F5F5F5"/>
+        <!-- PageBackground -->
+    </UserControl.Background>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" HorizontalAlignment="Center" Width="1000" Background="{StaticResource PageBackground}">
+
+            <!-- Dòng 0 -->
+            <Border Background="{StaticResource CardBackground}" 
+                    BorderBrush="{StaticResource BorderBrushLight}" BorderThickness="1"
+                    CornerRadius="6" Margin="0,10" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Margin="5" Style="{StaticResource FlatPrimaryButton}"
+                            Content="Sửa lệch công thức MathType"
+                            Command="{Binding FixMathTypeCommand}"/>
+
+                    <TextBlock Grid.Column="1" Margin="5"
+                               TextWrapping="Wrap" Style="{StaticResource FlatTextBlock}"
+                               Text="Căn chỉnh lại các công thức bị lệch do lỗi định dạng MathType khi copy từ Word. Giúp đề kiểm tra hiển thị chuẩn hơn khi in hoặc trộn."/>
+                </Grid>
+            </Border>
+
+            <!-- Dòng 1 -->
+            <Border Background="{StaticResource CardBackground}" 
+                    BorderBrush="{StaticResource BorderBrushLight}" BorderThickness="1"
+                    CornerRadius="6" Margin="0,10" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="🔑 Tạo key Gemini API"
+                               TextWrapping="Wrap" Margin="5" Style="{StaticResource FlatTextBlock}"
+                               HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Column="1" Margin="5" TextWrapping="Wrap" Style="{StaticResource FlatTextBlock}">
+                        <Run Text="①" FontSize="18"/>
+                        <Run Text="Truy cập trang " />
+                        <Hyperlink Command="{Binding OpenResourceCommand}" CommandParameter="https://aistudio.google.com/api-keys" FontWeight="Bold">
+                            https://aistudio.google.com/api-keys
+                        </Hyperlink>
+                        <LineBreak/>
+                        <Run Text="②" FontSize="18"/>
+                        <Run Text="Đăng nhập bằng tài khoản Google."/>
+                        <LineBreak/>
+                        <Run Text="③" FontSize="18"/>
+                        <Run Text="Chọn [Create API key] -> đặt tên key (ezMix) và chọn [Create project] để tạo dự án (ezMix) -> [Create key]"/>
+                        <LineBreak/>
+                        <Run Text="④" FontSize="18"/>
+                        <Run Text="Sao chép key và sử dụng trong chương trình."/>
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <!-- Dòng 2 -->
+            <Border Background="{StaticResource CardBackground}" 
+                    BorderBrush="{StaticResource BorderBrushLight}" BorderThickness="1"
+                    CornerRadius="6" Margin="0,10" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="📝 Quy trình chuẩn hóa" Style="{StaticResource FlatTextBlock}"
+                               Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Column="1" Margin="5" Style="{StaticResource FlatTextBlock}">
+                        <Run Text="[ĐỀ KIỂM TRA BẤT KỲ] -> Chuẩn hóa tự động -> [ĐỀ CHUẨN HÓA VÀ THỐNG KÊ]." FontWeight="Bold"/>  
+                        <LineBreak/>                                        
+                        <Run Text="①" FontSize="18"/>
+                        <Run Text="Người dùng cần tạo một thư mục, đặt đề gốc cần chuẩn hóa bên trong."/>
+                        <LineBreak/>                                        
+                        <Run Text="②" FontSize="18"/>
+                        <Run Text="Phần mềm sẽ tạo một bản sao từ đề gốc và tự động chuẩn hóa thành đề chuẩn hóa."/>
+                        <LineBreak/>                    
+                        <Run Text="③" FontSize="18"/>
+                        <Run Text="Người dùng cần kiểm tra kết quả nhận dạng và thống kê, nếu có sai sót cần tiến hành chỉnh sửa."/>
+                        <LineBreak/>                    
+                        <Run Text="④" FontSize="18"/>
+                        <Run Text="Nếu sửa trên đề chuẩn hóa, chỉ cần NHẬN DẠNG lại; Nếu sửa trên đề gốc, cần CHUẨN HÓA lại."/>
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+            <!-- Dòng 3 -->
+            <Border Background="{StaticResource CardBackground}" 
+                    BorderBrush="{StaticResource BorderBrushLight}" BorderThickness="1"
+                    CornerRadius="6" Margin="0,10" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="🔀 Quy trình trộn đề" Style="{StaticResource FlatTextBlock}"
+                               Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold"/>
+
+                    <TextBlock Grid.Column="1" Margin="5" Style="{StaticResource FlatTextBlock}">
+                        <Run Text="[ĐỀ CHUẨN HÓA] -> Trộn đề -> [ĐỀ TRỘN VÀ ĐÁP ÁN]." FontWeight="Bold"/>  
+                        <LineBreak/>      
+                        <Run Text="①" FontSize="18"/>
+                        <Run Text="Nhập thông tin trộn đề trên giao diện, có thể LƯU CẤU HÌNH để thuận tiện cho việc trộn các lần tiếp theo."/>
+                        <LineBreak/>   
+                        <Run Text="②" FontSize="18"/>
+                        <Run Text="Phần mềm xuất đề gốc, đề trộn và đáp án Word/Excel chi tiết trong thư mục ezMix cùng cấp với đề chuẩn hóa."/>
+                    </TextBlock>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

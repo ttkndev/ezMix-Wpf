@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Font mặc định -->
+    <FontFamily x:Key="DefaultFontFamily">Segoe UI</FontFamily>
+    <sys:Double x:Key="DefaultFontSize">14</sys:Double>
+
+    <!-- Màu chủ đạo -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="#2196F3"/>
+    <SolidColorBrush x:Key="PrimaryLightBrush" Color="#E3F2FD"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#FF9933"/>
+
+    <!-- Nền và border -->
+    <SolidColorBrush x:Key="CardBackground" Color="White"/>
+    <SolidColorBrush x:Key="PageBackground" Color="#F5F5F5"/>
+    <SolidColorBrush x:Key="BorderBrushLight" Color="#E0E0E0"/>
+
+    <!-- Trạng thái Button -->
+    <SolidColorBrush x:Key="PrimaryHoverBrush" Color="#1E88E5"/>
+    <SolidColorBrush x:Key="PrimaryPressedBrush" Color="#1565C0"/>
+    <SolidColorBrush x:Key="SecondaryHoverBrush" Color="#E8F1FE"/>
+    <SolidColorBrush x:Key="SecondaryPressedBrush" Color="#D0E6FD"/>
+    <SolidColorBrush x:Key="SecondaryDisabledBrush" Color="#F5F5F5"/>
+
+    <!-- Bổ sung cho TextBox/ComboBox -->
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#CCCCCC"/>
+    <SolidColorBrush x:Key="TextBoxHoverBrush" Color="#2196F3"/>
+    <SolidColorBrush x:Key="TextBoxFocusedBrush" Color="#1565C0"/>
+    <SolidColorBrush x:Key="TextBoxDisabledBrush" Color="#EEEEEE"/>
+
+    <!-- CheckBox Brushes -->
+    <SolidColorBrush x:Key="CheckBoxBorderBrush" Color="#CCCCCC"/>
+    <!-- viền mặc định -->
+    <SolidColorBrush x:Key="CheckBoxHoverBrush" Color="#2196F3"/>
+    <!-- viền khi hover -->
+    <SolidColorBrush x:Key="CheckBoxCheckedBrush" Color="#1565C0"/>
+    <!-- viền + tick khi checked -->
+    <SolidColorBrush x:Key="CheckBoxDisabledBrush" Color="#EEEEEE"/>
+    <!-- nền khi disabled -->
+
+    <!-- Tab Brushes -->
+    <SolidColorBrush x:Key="TabBorderBrush" Color="#CCCCCC"/>
+    <!-- viền mặc định -->
+    <SolidColorBrush x:Key="TabBackgroundBrush" Color="#F5F5F5"/>
+    <!-- nền header panel -->
+    <SolidColorBrush x:Key="TabHoverBrush" Color="#E3F2FD"/>
+    <!-- nền khi hover -->
+    <SolidColorBrush x:Key="TabSelectedBrush" Color="#2196F3"/>
+    <!-- nền khi selected -->
+    <SolidColorBrush x:Key="TabDisabledBrush" Color="#EEEEEE"/>
+    <!-- nền khi disabled -->
+
+
+    <!-- Layout -->
+    <CornerRadius x:Key="DefaultCornerRadius">4</CornerRadius>
+    <Thickness x:Key="DefaultControlMargin">4</Thickness>
+    <Thickness x:Key="DefaultTextBoxPadding">6,4</Thickness>
+    <Thickness x:Key="DefaultButtonPadding">6,4</Thickness>
+</ResourceDictionary>
